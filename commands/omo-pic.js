@@ -7,7 +7,7 @@ module.exports = {
   aliases: ['beauty', 'picture'],
   description: 'Returns a random picture of our gorgeous lord and savior',
   execute (message, args) {
-    const directoryString = '/home/blade/projects/discord-bots/good-money-productions/omo-pictures'
+    const directoryString = './omo-pictures'
     const files = fs.readdirSync(directoryString)
     console.log(files)
     let omoImageDir = directoryString + '/' + files[Math.floor(Math.random() * files.length)]
