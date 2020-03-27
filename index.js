@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+require('dotenv').config()
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token }= require('./config.json');
@@ -76,5 +77,5 @@ client.on('message', message => {
   }
 });
 
-client.login(token);
+client.login(process.env.api_token);
 
