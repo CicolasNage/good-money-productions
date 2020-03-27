@@ -77,5 +77,5 @@ client.on('message', message => {
   }
 });
 
-client.login(process.env.api_token);
+client.login(process.env.TOKEN);
 
