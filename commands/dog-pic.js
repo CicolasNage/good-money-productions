@@ -19,7 +19,7 @@ module.exports = {
 	.attachFiles([dogLink])
 	.setImage('attachment://discordjs.png');
 
-channel.send(exampleEmbed);
+channel.send(dogLink);
 
 
 
