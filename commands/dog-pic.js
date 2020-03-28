@@ -1,7 +1,7 @@
 const fs = require('fs')
 const Discord = require('discord.js');
 const Canvas = require('canvas')
-
+const fetch = require('node-fetch')
 fetchDogLink = () => {
     fetch('https://dog.ceo/api/breeds/image/random')
         .then(res => res.json())
