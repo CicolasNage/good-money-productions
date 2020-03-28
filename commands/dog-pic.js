@@ -22,9 +22,6 @@ module.exports = {
     };
     
     message.channel.send(dog);
-    
 
-
-
-  },
+  }
 };
