@@ -63,7 +63,7 @@ module.exports = {
         },
     };
     
-    channel.send(dogLink);
+    message.channel.send(dogLink);
     
 
 
