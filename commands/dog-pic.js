@@ -4,7 +4,7 @@ const Canvas = require('canvas')
 
 fetchDogLink = () => {
     let dogLink = fetch('https://dog.ceo/api/breeds/image/random').then(res=>res.json().message)
-    return dogLink;
+    return 'dogLink will be here if it is working';
 }
 
 module.exports = {
