@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const Canvas = require('canvas')
 
 fetchDogLink = () => {
-    let dogLink = fetch('https://dog.ceo/api/breeds/image/random').then(res=>res.message)
+    let dogLink = fetch('https://dog.ceo/api/breeds/image/random').then(res=>res.json().message)
     return dogLink;
 }
 
@@ -19,7 +19,7 @@ module.exports = {
 	.attachFiles([dogLink])
 	.setImage('attachment://discordjs.png');
 
-channel.send(dogLink);
+channel.send(exampleEmbed);
 
 
 
