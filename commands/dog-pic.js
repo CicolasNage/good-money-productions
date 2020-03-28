@@ -13,7 +13,7 @@ module.exports = {
   
   
   execute (message, args) {
-    const dogLink = fetchDogLink();
+    
     const exampleEmbed = {
         color: 0x0099ff,
         title: 'Some title',
