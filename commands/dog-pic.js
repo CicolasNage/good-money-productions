@@ -1,12 +1,13 @@
-const fs = require('fs')
+const fs = require('fs');
 const Discord = require('discord.js');
-const Canvas = require('canvas')
-const fetch = require('node-fetch')
+const Canvas = require('canvas');
+const nodefetch = require('node-fetch');
 
-fetchDogLink = async () => {
-    fetch('https://dog.ceo/api/breeds/image/random')
-        .then(res => res.json())    
-}
+let fetchDogLink = async() => {
+  let link = await nodefetch('https://dog.ceo/api/breeds/image/random')
+    .then(res => res.json());    
+  return link;
+};
 
 module.exports = {
   name: 'dog-pic',
@@ -15,8 +16,12 @@ module.exports = {
 
   execute (message, args) {
 
-    let doglink=fetchDogLink();
-    message.channel.send(doglink.message);
+    let testDogs = async () => {
+      return await fetchDogLink()
+    }
+    testDogs()
+      .then(res => message.channel.send(res.message))
+    
 
   }
 };
