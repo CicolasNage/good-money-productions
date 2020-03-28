@@ -53,9 +53,6 @@ module.exports = {
                 inline: true,
             },
         ],
-        image: {
-            url: dogLink,
-        },
         timestamp: new Date(),
         footer: {
             text: 'Some footer text here',
