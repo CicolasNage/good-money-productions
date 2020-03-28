@@ -15,10 +15,9 @@ module.exports = {
   
 
   execute (message, args) {
+
     
-    let dog = fetchDogLink();
-    
-    message.channel.send(dog);
+    message.channel.send('woof');
 
   }
 };
