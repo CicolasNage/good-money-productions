@@ -63,7 +63,7 @@ module.exports = {
         },
     };
     
-    message.channel.send(dogLink);
+    message.channel.send('fart');
     
 
 
