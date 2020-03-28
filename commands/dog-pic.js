@@ -2,11 +2,10 @@ const fs = require('fs')
 const Discord = require('discord.js');
 const Canvas = require('canvas')
 const fetch = require('node-fetch')
-fetchDogLink = () => {
+
+fetchDogLink = async () => {
     fetch('https://dog.ceo/api/breeds/image/random')
-        .then(res => res.json())
-        .then(res => res)
-    
+        .then(res => res.json())    
 }
 
 module.exports = {
@@ -16,8 +15,8 @@ module.exports = {
 
   execute (message, args) {
 
-    
-    message.channel.send('woof');
+    let doglink=fetchDogLink();
+    message.channel.send(doglink);
 
   }
 };
