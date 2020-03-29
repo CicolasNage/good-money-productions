@@ -4,14 +4,14 @@ const Canvas = require('canvas');
 const nodefetch = require('node-fetch');
 
 let fetchDogLink = async() => {
-  let link = await nodefetch('https://dog.ceo/api/breeds/image/random')
+  let link = await nodefetch('http://taco-randomizer.herokuapp.com/random/?full-taco=true')
     .then(res => res.json());    
   return link;
 };
 
 module.exports = {
-  name: 'dog-pic',
-  description: 'Returns a random picture of a pup from the dog api',
+  name: 'random-taco',
+  description: 'Returns a picture and a joke about chuck',
   
 
   execute (message, args) {
@@ -20,7 +20,9 @@ module.exports = {
       return await fetchDogLink()
     }
     testDogs()
-      .then(res => message.channel.send(res.message))
+      .then(res => {
+        message.channel.send(res.base_layer.recipe)
+      })
     
 
   }
